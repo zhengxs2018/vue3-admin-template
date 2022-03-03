@@ -46,9 +46,3 @@ const handleRemove = (name: string) => {
   // 待迁移
 }
 </script>
-
-<style>
-.tabs-view {
-  border-right: none;
-}
-</style>
