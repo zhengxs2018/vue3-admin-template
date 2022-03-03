@@ -1,3 +1,4 @@
+import './shim-router'
 import type { App } from 'vue'
 
 import ViewProvider from './components/ViewProvider.vue'
