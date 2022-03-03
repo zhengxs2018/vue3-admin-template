@@ -21,7 +21,7 @@ const useUserStore = defineStore('userStore', {
   }),
   getters: {
     displayUserName({ currentUser }) {
-      return currentUser.nickname || currentUser.email || '昵称未设置'
+      return currentUser?.nickname || currentUser?.email || '昵称未设置'
     }
   },
   actions: {
@@ -42,7 +42,7 @@ const useUserStore = defineStore('userStore', {
       const userProfile = oidcUser.profile
 
       // 用户不一致
-      if (userProfile.id === currentUser.id) {
+      if (userProfile.id === currentUser?.id) {
         this.isLoggedIn = false
         this.isUserChanged = true
         return false
