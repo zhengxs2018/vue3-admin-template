@@ -1,3 +1,16 @@
+<script lang="ts" setup>
+import { storeToRefs } from 'pinia'
+
+import SideMenu from '@/components/SideMenu.vue'
+import TabsView from '@/components/TabsView.vue'
+
+import { ViewProvider } from '@/supports/view-manager'
+import useUserStore from '@/store/user.store'
+
+const userStore = useUserStore()
+const { displayUserName } = storeToRefs(userStore)
+</script>
+
 <template>
   <el-container class="h-full">
     <el-header class="layout-header">
@@ -21,19 +34,6 @@
     </el-container>
   </el-container>
 </template>
-
-<script lang="ts" setup>
-import { storeToRefs } from 'pinia'
-
-import SideMenu from '@/components/SideMenu.vue'
-import TabsView from '@/components/TabsView.vue'
-
-import { ViewProvider } from '@/supports/view-manager'
-import useUserStore from '@/store/user.store'
-
-const userStore = useUserStore()
-const { displayUserName } = storeToRefs(userStore)
-</script>
 
 <style>
 .layout-header {

@@ -1,13 +1,3 @@
-<template>
-  <div class="welcome">
-    欢迎, {{ displayUserName }}
-
-    <p>这里的东西会被缓存</p>
-    <el-input v-model="message" />
-    <p>{{ message }}</p>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { storeToRefs } from 'pinia'
@@ -29,3 +19,13 @@ export default defineComponent({
   }
 })
 </script>
+
+<template>
+  <div class="welcome">
+    欢迎, {{ displayUserName }}
+
+    <p>这里的东西会被缓存</p>
+    <el-input v-model="message" />
+    <p>{{ message }}</p>
+  </div>
+</template>

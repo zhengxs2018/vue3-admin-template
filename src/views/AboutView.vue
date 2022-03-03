@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+const message = ref(Math.random())
+</script>
+
 <template>
   <div class="about">
     <h1>This is an about page</h1>
@@ -7,9 +13,3 @@
     <p>{{ message }}</p>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { ref } from 'vue'
-
-const message = ref(Math.random())
-</script>
