@@ -16,7 +16,10 @@ async function main() {
   const { user, appState } = await auth.prepare()
 
   const targetUrl = appState ? appState.targetUrl : null
-  if (targetUrl) history.replaceState(null, '', targetUrl)
+  if (targetUrl) {
+    const parsed = new URL(targetUrl)
+    await router.replace(parsed.hash.replace('#', ''))
+  }
 
   const app = createVue()
 
