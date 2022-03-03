@@ -1,6 +1,7 @@
 const { defineConfig } = require('@vue/cli-service')
 
 module.exports = defineConfig({
+  publicPath: '/vue3-admin-template',
   pages: {
     index: {
       title: process.env.VUE_APP_SITE_TITLE,
@@ -9,13 +10,5 @@ module.exports = defineConfig({
     }
   },
   transpileDependencies: true,
-  lintOnSave: false,
-  devServer: {
-    proxy: {
-      '/oidc': {
-        target: 'https://npplchnnjgpmhgjn-demo.authing.cn',
-        changeOrigin: true
-      }
-    }
-  }
+  lintOnSave: false
 })
