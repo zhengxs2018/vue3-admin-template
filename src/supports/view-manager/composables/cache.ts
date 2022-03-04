@@ -1,7 +1,7 @@
 import { provide, inject, ref, KeepAliveProps, toRef } from 'vue'
 import type { Ref } from 'vue'
 
-import type { MaybeRef } from '../shared/reactive'
+import type { MaybeRef } from '@/supports/shared/reactive'
 
 const CACHE_INJECT_KEY = Symbol.for('view-manager#cache')
 

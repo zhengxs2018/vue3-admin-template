@@ -1,6 +1,6 @@
 import type { RouteLocation } from 'vue-router'
 
-import { getRootRoute } from '../shared/router'
+import { getRootRoute } from '@/supports/shared/router'
 
 export function shouldCacheComponent(route: RouteLocation) {
   // TODO 对父子路由支持有限制

@@ -1,7 +1,7 @@
 import { stubTrue } from 'lodash-es'
 import type { RouteLocation } from 'vue-router'
 
-import { isUnknownRoute } from '../shared/router'
+import { isUnknownRoute } from '@/supports/shared/router'
 
 export type SkipUnknownRoute = (route: RouteLocation) => boolean
 

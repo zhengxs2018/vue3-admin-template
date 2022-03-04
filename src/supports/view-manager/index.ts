@@ -1,5 +1,4 @@
-import './shim-router'
-import type { App } from 'vue'
+import './shims-vue-router'
 
 import ViewProvider from './components/ViewProvider.vue'
 import ViewOutlet from './components/ViewOutlet.vue'
@@ -16,11 +15,4 @@ export {
   useManager,
   useHistory,
   useCache,
-}
-
-export default {
-  install(app: App) {
-    app.component('view-provider', ViewProvider)
-    app.component('view-outlet', ViewOutlet)
-  }
 }

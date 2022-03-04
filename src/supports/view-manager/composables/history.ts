@@ -6,7 +6,8 @@ import type { Ref } from 'vue'
 import { useRouter } from 'vue-router'
 import type { RouteLocation, NavigationGuardWithThis, NavigationHookAfter } from 'vue-router'
 
-import { isNavigationDuplicated, getRootRoute, getRootRouteComponentName } from '../shared/router'
+import { isNavigationDuplicated, getRootRoute, getRootRouteComponentName } from '@/supports/shared/router'
+
 import type { HistoryItem, HistoryCreateProperties } from '../shared/history'
 
 import { shouldCacheComponent } from '../util/shouldCache'
